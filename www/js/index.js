@@ -37,16 +37,11 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function () {
-        var game = new Phaser.Game(window.innerWidth, window.innerHeight, Phaser.AUTO, '', {preload: preload, create: create});
-
-        function preload() {
-            game.load.image('logo', 'img/logo.png');
-        }
-
-        function create() {
-            var logo = game.add.sprite(game.world.centerX, game.world.centerY, 'logo');
-            logo.anchor.setTo(0.5, 0.5);
-        }
+        var game = new Phaser.Game(window.innerWidth, window.innerHeight, Phaser.AUTO, '');
+        
+        game.state.add('Boot', Growth.Boot);
+        game.state.add('Preloader', Growth.Preloader);
+        game.state.start('Boot');
     }
 };
 
