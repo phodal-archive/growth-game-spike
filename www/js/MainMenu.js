@@ -5,8 +5,6 @@ Growth.MainMenu = function (game) {
 
 Growth.MainMenu.prototype = {
   create: function () {
-    this.game.stage.backgroundColor = "#5F6369";
-
     button = this.game.add.button(this.game.world.centerX, this.game.world.centerY, 'start-button', this.startGame, this, 1, 0, 2);
     button.anchor.setTo(0.5, 0.5);
 
@@ -15,7 +13,7 @@ Growth.MainMenu.prototype = {
 
     var style = {
       font: "20px '微软雅黑'",
-      fill: "#fff",
+      fill: "#ddd",
       wordWrap: true,
       wordWrapWidth: this.game.width,
       align: "center"

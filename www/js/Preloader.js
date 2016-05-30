@@ -5,6 +5,8 @@ Growth.Preloader = function (game) {
 
 Growth.Preloader.prototype = {
   preload: function () {
+    this.game.stage.backgroundColor = "#eaeaea";
+
     this.preloadBar = this.add.sprite(0, this.game.height - 100, 'preloaderBar');
     this.load.setPreloadSprite(this.preloadBar);
 
