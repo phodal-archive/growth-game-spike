@@ -7,6 +7,7 @@ Growth.Preloader.prototype = {
     preload: function () {
         this.preloadBar = this.add.sprite(0, 100, 'preloaderBar');
         this.load.setPreloadSprite(this.preloadBar);
+
         this.load.image('logo', 'images/logo.png');
     },
 

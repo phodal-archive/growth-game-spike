@@ -6,7 +6,7 @@ Growth.Game = function (game) {
 Growth.Game.prototype = {
 
     create: function () {
-        console.log("Start Game!");
+        this.game.stage.backgroundColor = "#fff";
     },
 
     gameOver: function () {
