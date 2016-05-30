@@ -10,6 +10,7 @@ Growth.Preloader.prototype = {
 
         this.load.image('logo', 'images/logo.png');
         this.load.image('background', 'images/trok.jpg');
+        this.load.spritesheet('button', 'images/button_sprite_sheet.png', 193, 71);
     },
 
     create: function () {
