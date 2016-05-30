@@ -7,6 +7,7 @@ Growth.Game.prototype = {
 
     create: function () {
         this.game.stage.backgroundColor = "#fff";
+        this.add.image(0, 0, 'background');
     },
 
     gameOver: function () {

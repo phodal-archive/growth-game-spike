@@ -9,6 +9,7 @@ Growth.Preloader.prototype = {
         this.load.setPreloadSprite(this.preloadBar);
 
         this.load.image('logo', 'images/logo.png');
+        this.load.image('background', 'images/trok.jpg');
     },
 
     create: function () {
