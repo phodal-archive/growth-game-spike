@@ -17,35 +17,35 @@
  * under the License.
  */
 var app = {
-    // Application Constructor
-    initialize: function () {
-        this.bindEvents();
-    },
-    // Bind Event Listeners
-    //
-    // Bind any events that are required on startup. Common events are:
-    // 'load', 'deviceready', 'offline', and 'online'.
-    bindEvents: function () {
-        if(window.cordova){
-            document.addEventListener('deviceready', this.onDeviceReady, false);
-        } else {
-            this.onDeviceReady();
-        }
-    },
-    // deviceready Event Handler
-    //
-    // The scope of 'this' is the event. In order to call the 'receivedEvent'
-    // function, we must explicitly call 'app.receivedEvent(...);'
-    onDeviceReady: function () {
-        var game = new Phaser.Game(window.innerWidth, window.innerHeight, Phaser.AUTO, '');
-
-        game.state.add('Boot', Growth.Boot);
-        game.state.add('Preloader', Growth.Preloader);
-        game.state.add('MainMenu', Growth.MainMenu);
-        game.state.add('Game', Growth.Game);
-        
-        game.state.start('Boot');
+  // Application Constructor
+  initialize: function () {
+    this.bindEvents();
+  },
+  // Bind Event Listeners
+  //
+  // Bind any events that are required on startup. Common events are:
+  // 'load', 'deviceready', 'offline', and 'online'.
+  bindEvents: function () {
+    if (window.cordova) {
+      document.addEventListener('deviceready', this.onDeviceReady, false);
+    } else {
+      this.onDeviceReady();
     }
+  },
+  // deviceready Event Handler
+  //
+  // The scope of 'this' is the event. In order to call the 'receivedEvent'
+  // function, we must explicitly call 'app.receivedEvent(...);'
+  onDeviceReady: function () {
+    var game = new Phaser.Game(window.innerWidth, window.innerHeight, Phaser.AUTO, '');
+
+    game.state.add('Boot', Growth.Boot);
+    game.state.add('Preloader', Growth.Preloader);
+    game.state.add('MainMenu', Growth.MainMenu);
+    game.state.add('Game', Growth.Game);
+
+    game.state.start('Boot');
+  }
 };
 
 app.initialize();
