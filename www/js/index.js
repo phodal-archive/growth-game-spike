@@ -38,9 +38,11 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function () {
         var game = new Phaser.Game(window.innerWidth, window.innerHeight, Phaser.AUTO, '');
-        
+
         game.state.add('Boot', Growth.Boot);
         game.state.add('Preloader', Growth.Preloader);
+        game.state.add('MainMenu', Growth.MainMenu);
+        game.state.add('Game', Growth.Game);
         game.state.start('Boot');
     }
 };
