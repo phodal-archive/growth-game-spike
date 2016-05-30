@@ -6,9 +6,9 @@ Growth.Game = function (game) {
 Growth.Game.prototype = {
 
   create: function () {
-    this.game.stage.backgroundColor = "#fff";
-    this.game.scale.scaleMode = Phaser.ScaleManager.RESIZE;
-    this.add.image(0, 0, 'background');
+    var background = this.game.add.image(0, 0, 'background');
+    background.height = this.game.height;
+    background.width = this.game.width;
   },
 
   gameOver: function () {
