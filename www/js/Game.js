@@ -12,16 +12,17 @@ Growth.Game.prototype = {
 
     var style = {
       font: "32px '微软雅黑'",
-      fill: "#ddd",
+      fill: "#1d1500",
       wordWrap: true,
       wordWrapWidth: this.game.width,
-      align: "center",
-      alpha: 0.5,
-      opacity: 0.5
+      align: "center"
     };
 
-    var text = this.game.add.text(this.game.height, this.game.width / 2, "欢迎来到Dream Coastline", style);
-    text.anchor.set(0.5);
+    this.welcomeText = this.game.add.text(this.game.height, this.game.width / 2, "欢迎来到Dream Coastline", style);
+    this.welcomeText.anchor.set(0.5);
+    this.welcomeText.alpha = 1;
+
+    this.game.add.tween(this.welcomeText).to({alpha: 0}, 4000, Phaser.Easing.Linear.None, true)
   },
 
   gameOver: function () {
