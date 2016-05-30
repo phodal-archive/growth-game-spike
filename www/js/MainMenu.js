@@ -9,10 +9,6 @@ Growth.MainMenu.prototype = {
 
     button = this.game.add.button(this.game.world.centerX, this.game.world.centerY, 'button', this.startGame, this, 1, 0, 2);
     button.anchor.setTo(0.5, 0.5);
-
-    button.onInputOver.add(console.log, this);
-    button.onInputOut.add(console.log, this);
-    button.onInputUp.add(console.log, this);
   },
 
   update: function () {

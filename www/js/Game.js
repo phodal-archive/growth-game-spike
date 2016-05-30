@@ -7,6 +7,7 @@ Growth.Game.prototype = {
 
   create: function () {
     this.game.stage.backgroundColor = "#fff";
+    this.game.scale.scaleMode = Phaser.ScaleManager.RESIZE;
     this.add.image(0, 0, 'background');
   },
 
